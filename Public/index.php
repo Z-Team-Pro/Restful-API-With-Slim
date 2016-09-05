@@ -11,4 +11,12 @@ $app->get('/hello/{name}', function (Request $request, Response $response) {
 
     return $response;
 });
+
+$app->get('/test/{new}', function (Request $request, Response $response) {
+    $new = $request->getAttribute('new');
+    $response->getBody()->write("This is test, $new");
+
+    return $response;
+});
+
 $app->run();
