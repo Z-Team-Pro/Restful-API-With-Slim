@@ -47,6 +47,38 @@ $out['FirstName']=$FirstName;
 $out['LastName']=$LastName;
 $Response->getBody()->write(json_encode($out));
 
+});
+//Put Resource 
+$app->put('/testput',function($Request ,$Response){
+
+$data=$Request->getParsedBody();
+$username=$data['UserName'];
+$Password=$data['Password'];
+$Response->getBody()->write("$username your Password is $Password");
+
 }); 
+//Delete resource 
+$app->delete('/testdelete',function($Request ,$Response){
+
+$data=$Request->getParsedBody();
+$username=$data['UserName'];
+$Password=$data['Password'];
+$Response->getBody()->write("$username your Password is $Password With Delete Test Demo ");
+
+}); 
+//mutliple Methods 
+$app->map(['PUT','GET'],'/multipleMethodsTest/{id}',function($Request ,$Response,$args){
+$id=$args['id'];
+if($Request->isPut()){
+
+$Response->getBody()->write("This id=$id Will be updated ");
+
+}
+if($Request->isGet()){
+
+$Response->getBody()->write("This id=$id Will be retrived  ");
+}
+
+});
 $app->run();
 //
