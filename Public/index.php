@@ -28,5 +28,12 @@ $inputdata['phone']=filter_var($data['phone'],FILTER_SANITIZE_STRING);
 $r2->getBody()->write("dear".$inputdata['name']."Your phone number is ".$inputdata['phone']);
 
 });
+//Using args argments
+$app->get('/testargs/{name}/{phone}',function($request ,$response,$args){
+
+$name=$args['name'];
+$phone=$args['phone'];
+$response->getBody()->write("This is a test for args ,$name your phone number is $phone");
+}); 
 $app->run();
 //
