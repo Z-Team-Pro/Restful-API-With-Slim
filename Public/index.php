@@ -2,6 +2,10 @@
 
 require '../vendor/autoload.php';
 
+
+
+
+
 $app = new \Slim\App;
 
  require '../API/others.php';
@@ -11,8 +15,7 @@ $app = new \Slim\App;
   require '../API/args.php';
   require '../API/jsonresponse.php';
   require '../API/posttest.php';
-
-
+require '../API/request.php';
 
 $app->run();
 //
