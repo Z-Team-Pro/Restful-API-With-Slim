@@ -16,6 +16,6 @@ $app = new \Slim\App;
   require '../API/jsonresponse.php';
   require '../API/posttest.php';
 require '../API/request.php';
-
+require '../API/response.php';
 $app->run();
 //

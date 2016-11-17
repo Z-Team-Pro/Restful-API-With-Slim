@@ -19,6 +19,7 @@ $I=-1;
 foreach ($Headers as $key => $value) {
 	$out[$key]= $key  .":". implode(",", $value);
 }
+
 $res->getBody()->write(json_encode($out));
 
 });
