@@ -1,7 +1,7 @@
 <?php
 //Put Resource 
 $app->put('/testput',function($Request ,$Response){
-
+$NewJson=$this->JsonOperations;
 $data=$Request->getParsedBody();
 $username=$data['UserName'];
 $Password=$data['Password'];

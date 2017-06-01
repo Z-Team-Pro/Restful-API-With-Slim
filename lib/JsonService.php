@@ -2,7 +2,6 @@
 
 class JsonService{
 
-
 public function encode($array){
 
 return json_encode($array);
