@@ -27,3 +27,12 @@ $app->get('/scureRoute',function($req,$res){
 $res->getBody()->write("---this is your  scure Route ----");
 
 })->add($test);
+
+
+//with middleware class
+
+$app->get('/withMidClass',function($req,$res){
+
+$res->getBody()->write("---this is My Route With middleware Class ----");
+
+})->add(new middelwareClass());

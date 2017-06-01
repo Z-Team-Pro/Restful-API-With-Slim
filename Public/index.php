@@ -10,6 +10,7 @@ $conf=[
 
 $c= new \Slim\Container($conf);
 $app = new \Slim\App($c);
+ require '../lib/middlewareClass.php';
  require '../src/middleware.php';
  require '../API/others.php';
  require '../API/optional.php';
