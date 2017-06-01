@@ -2,11 +2,14 @@
 
 require '../vendor/autoload.php';
 
+$conf=[
+'settings'=>[
+'displayErrorDetails'=>true,
+],
+];
 
-
-
-
-$app = new \Slim\App;
+$c= new \Slim\Container($conf);
+$app = new \Slim\App($c);
  require '../src/middleware.php';
  require '../API/others.php';
  require '../API/optional.php';
