@@ -7,3 +7,10 @@ $Json= new JsonService();
 return $Json;
 
 };
+
+
+$containter['JWT']=function($containter){
+$JWT= new \Firebase\JWT\JWT();
+return $JWT;
+
+};

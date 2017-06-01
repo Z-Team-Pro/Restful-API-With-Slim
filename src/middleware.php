@@ -1,19 +1,14 @@
 <?php
 
 
-
+use \Firebase\JWT\JWT;
 use \Slim\Middleware\HttpBasicAuthentication\AuthenticatorInterface;
 
-
+//basic auth 
 
 class AuthenticatorClass implements AuthenticatorInterface{
 
-
-
 public function __invoke(array $arguments){
-
-
-
 $user=$arguments['user'];
 $password=$arguments['password'];
 
@@ -39,6 +34,48 @@ $app->add( new \Slim\Middleware\HttpBasicAuthentication(
 ]
 
 ));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //middleware
 /*

@@ -11,10 +11,13 @@ $conf=[
 $c= new \Slim\Container($conf);
 $app = new \Slim\App($c);
  require '../lib/JsonService.php';
- require '../src/DI.php';
+
  require '../lib/middlewareClass.php';
  require '../src/middleware.php';
+  require '../src/DI.php';
  require '../API/others.php';
+ require '../API/JWTToken.php';
+
  require '../API/optional.php';
   require '../API/BasicAuth.php';
 
